@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextFieldsDelegation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your zip code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvK-Rc-t7Q">
+                                <rect key="frame" x="16" y="67" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xS8-0v-8aw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter cash value" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nok-QE-cIw">
+                                <rect key="frame" x="16" y="118" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ie0-gi-1Ne"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Switch must turn on to edit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjt-MD-0CG">
+                                <rect key="frame" x="16" y="173" width="506" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YFU-Tq-6zb"/>
+                                </connections>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="daV-j2-aWZ">
+                                <rect key="frame" x="535" y="172" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="NLe-kg-3Ps"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Mf-UB-kKY"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Must enter a digit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfH-aG-R1d">
+                                <rect key="frame" x="16" y="36" width="568" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="daV-j2-aWZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1Eo-Qw-kTy"/>
+                            <constraint firstItem="Nok-QE-cIw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BF0-lh-sLb"/>
+                            <constraint firstItem="XfH-aG-R1d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Lee-Ml-fdC"/>
+                            <constraint firstItem="mvK-Rc-t7Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NB9-sp-qcx"/>
+                            <constraint firstItem="Qjt-MD-0CG" firstAttribute="top" secondItem="Nok-QE-cIw" secondAttribute="bottom" constant="25" id="OF1-x3-8la"/>
+                            <constraint firstItem="mvK-Rc-t7Q" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="P15-En-JbO"/>
+                            <constraint firstItem="daV-j2-aWZ" firstAttribute="leading" secondItem="Qjt-MD-0CG" secondAttribute="trailing" constant="13" id="YwT-i9-B5Q"/>
+                            <constraint firstItem="Qjt-MD-0CG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b2x-7j-Zpx"/>
+                            <constraint firstItem="XfH-aG-R1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="d5o-i2-U0l"/>
+                            <constraint firstItem="mvK-Rc-t7Q" firstAttribute="top" secondItem="XfH-aG-R1d" secondAttribute="bottom" constant="22" id="sjP-To-E4C"/>
+                            <constraint firstItem="Nok-QE-cIw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tZK-2R-wg2"/>
+                            <constraint firstItem="daV-j2-aWZ" firstAttribute="top" secondItem="Nok-QE-cIw" secondAttribute="bottom" constant="24" id="ubF-V3-E4g"/>
+                            <constraint firstItem="XfH-aG-R1d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ype-td-KPc"/>
+                            <constraint firstItem="Nok-QE-cIw" firstAttribute="top" secondItem="mvK-Rc-t7Q" secondAttribute="bottom" constant="21" id="zIf-gY-rju"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblWarning" destination="XfH-aG-R1d" id="KOd-kp-UgK"/>
+                        <outlet property="switchTextFieldLockable" destination="daV-j2-aWZ" id="Ehh-5k-m8a"/>
+                        <outlet property="textFieldCashValue" destination="Nok-QE-cIw" id="m1J-at-jns"/>
+                        <outlet property="textFieldLockable" destination="Qjt-MD-0CG" id="xub-D7-d7w"/>
+                        <outlet property="textFieldZipCode" destination="mvK-Rc-t7Q" id="3Uq-yS-Rr3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144" y="395"/>
+        </scene>
+    </scenes>
+</document>
